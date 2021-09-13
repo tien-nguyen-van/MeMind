@@ -1,3 +1,4 @@
-github-connect:
-	eval "$(ssh-agent -s)"
+cnt-ssh:
+	sh mind.sh
+cnt-git:
 	ssh-add ~/.ssh/tiennvpm
