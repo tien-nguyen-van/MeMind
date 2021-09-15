@@ -1,4 +1,4 @@
-package com.memind.modules.alarm;
+package com.tiennv.memind.modules.alarm;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

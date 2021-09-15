@@ -1,4 +1,4 @@
-package com.memind.modules.alarm;
+package com.tiennv.memind.modules.alarm;
 
 import android.app.Activity;
 import android.content.Intent;

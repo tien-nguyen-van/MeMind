@@ -1,4 +1,4 @@
-package com.memind;
+package com.tiennv.memind;
 
 import com.facebook.react.ReactActivity;
 
