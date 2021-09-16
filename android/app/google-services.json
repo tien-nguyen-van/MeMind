@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799129607653",
+    "project_id": "memind-tiennv",
+    "storage_bucket": "memind-tiennv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799129607653:android:6cf018b057d6a9f584e30c",
+        "android_client_info": {
+          "package_name": "com.tiennv.memind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799129607653-l6miukksbr67irn3lhm7er1kqdqokbq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL_6edKRD0eQduOe4luTJ7iL7GU7LsJKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799129607653-l6miukksbr67irn3lhm7er1kqdqokbq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
