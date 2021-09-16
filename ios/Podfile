@@ -12,6 +12,11 @@ target 'MeMind' do
     :hermes_enabled => false
   )
 
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
+  pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
+
+
   target 'MeMindTests' do
     inherit! :complete
     # Pods for testing
