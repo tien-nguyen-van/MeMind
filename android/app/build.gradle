@@ -83,6 +83,12 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 
+// project.ext.vectoricons = [
+//     iconFontNames: [ 'MaterialIcons.ttf' ] // Name of the font files you want to copy
+// ]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -102,7 +108,7 @@ def enableProguardInReleaseBuilds = false
  * The preferred build flavor of JavaScriptCore.
  *
  * For example, to use the international variant, you can use:
- * `def jscFlavor = 'org.webkit:android-jsc-intl:+'`
+ * `def jscFlavor = 'org.webkit:android-jsc-int:+'`
  *
  * The international variant includes ICU i18n library and necessary data
  * allowing to use e.g. `Date.toLocaleString` and `String.localeCompare` that
@@ -118,7 +124,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
-def enableHermes = project.ext.react.get("enableHermes", false);
+def enableHermes = project.ext.react.get("enableHermes", false)
 
 android {
     ndkVersion rootProject.ext.ndkVersion
@@ -183,17 +189,21 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
-    implementation "com.google.android.gms:play-services-base:17.6.0"
+    //androidx
+    def work_version = '2.6.0'
+    implementation "androidx.work:work-runtime:$work_version"
 
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    // implementation "com.google.android.gms:play-services-base:17.6.0"
 
-    implementation project(path: ":@react-native-firebase_messaging")
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // implementation project(path: ":@react-native-firebase_messaging")
     // Import the Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+    // implementation platform('com.google.firebase:firebase-bom:28.4.0')
 
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
-    implementation "com.google.firebase:firebase-analytics:17.3.0"
+    // implementation "com.google.firebase:firebase-analytics:17.3.0"
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
@@ -212,7 +222,7 @@ dependencies {
     }
 
     if (enableHermes) {
-        def hermesPath = "../../node_modules/hermes-engine/android/";
+        def hermesPath = "../../node_modules/hermes-engine/android/"
         debugImplementation files(hermesPath + "hermes-debug.aar")
         releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
@@ -229,4 +239,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
 
-apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+// apply plugin: 'com.google.gms.google-services'  // Google Services plugin
