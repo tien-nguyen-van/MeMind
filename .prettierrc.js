@@ -5,4 +5,5 @@ module.exports = {
   semi: false,
   trailingComma: 'none',
   arrowParens: 'avoid',
+  files: '*.ts, *.tsx, *.js'
 }
